@@ -17,7 +17,7 @@ export default class App extends Component {
     this.location();
   }
 
-  render() {
+  renderContent() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div> Error: {this.state.errorMessage}</div>;
     }
@@ -26,6 +26,10 @@ export default class App extends Component {
       return <SeasonDisplay lat={this.state.lat} />;
     }
     return <Spinner message="Please accept the location request" />;
+  }
+
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
