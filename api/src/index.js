@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import CountriesApi from "./components/CountriesApi";
+import CountriesApi from "./apis/CountriesApi";
+import PokemonApi from "./apis/PokemonApi";
 
 export default class App extends Component {
   render() {
@@ -8,7 +9,8 @@ export default class App extends Component {
       <div>
         {" "}
         App is working!
-        <CountriesApi />
+        {/* <CountriesApi /> */}
+        <PokemonApi />
       </div>
     );
   }
